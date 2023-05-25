@@ -1296,10 +1296,7 @@
                     "pattern": "^function"
                   },
                   "vars": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
+                    "type": "array"
                   },
                   "name": {
                     "type": "string",
@@ -1419,12 +1416,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "interval",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "http_path": {
                                 "default": "/",
@@ -1480,14 +1472,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "interval",
-                                  "tcp_failures",
-                                  "timeouts",
-                                  "http_statuses",
-                                  "http_failures"
-                                ]
+                                "type": "object"
                               },
                               "req_headers": {
                                 "items": {
@@ -1519,19 +1504,7 @@
                                 "type": "integer"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "port",
-                              "healthy",
-                              "http_path",
-                              "https_verify_certificate",
-                              "unhealthy",
-                              "req_headers",
-                              "timeout",
-                              "type",
-                              "host",
-                              "concurrency"
-                            ]
+                            "type": "object"
                           },
                           "passive": {
                             "properties": {
@@ -1575,11 +1548,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "unhealthy": {
                                 "properties": {
@@ -1617,13 +1586,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "http_failures",
-                                  "tcp_failures",
-                                  "timeouts"
-                                ]
+                                "type": "object"
                               },
                               "type": {
                                 "enum": [
@@ -1635,12 +1598,7 @@
                                 "type": "string"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "healthy",
-                              "unhealthy",
-                              "type"
-                            ]
+                            "type": "object"
                           }
                         },
                         "type": "object",
@@ -1656,10 +1614,6 @@
                               "passive"
                             ]
                           }
-                        ],
-                        "x-apifox-orders": [
-                          "active",
-                          "passive"
                         ]
                       },
                       "hash_on": {
@@ -1715,29 +1669,21 @@
                             "type": "integer"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "size",
-                          "idle_timeout",
-                          "requests"
-                        ]
+                        "type": "object"
                       },
                       "timeout": {
                         "properties": {
                           "connect": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "read": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "send": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           }
                         },
                         "type": "object",
@@ -1745,11 +1691,6 @@
                           "connect",
                           "send",
                           "read"
-                        ],
-                        "x-apifox-orders": [
-                          "connect",
-                          "read",
-                          "send"
                         ]
                       },
                       "id": {
@@ -1781,9 +1722,7 @@
                             "description": "value of label"
                           }
                         },
-                        "description": "key/value pairs to specify attributes",
-                        "x-apifox-orders": [],
-                        "properties": {}
+                        "description": "key/value pairs to specify attributes"
                       },
                       "discovery_args": {
                         "properties": {
@@ -1796,11 +1735,7 @@
                             "description": "namespace id"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "group_name",
-                          "namespace_id"
-                        ]
+                        "type": "object"
                       },
                       "nodes": {
                         "anyOf": [
@@ -1812,8 +1747,7 @@
                                 "description": "weight of node"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": []
+                            "type": "object"
                           },
                           {
                             "items": {
@@ -1830,8 +1764,7 @@
                                 },
                                 "metadata": {
                                   "type": "object",
-                                  "description": "metadata of node",
-                                  "x-apifox-orders": []
+                                  "description": "metadata of node"
                                 },
                                 "host": {
                                   "pattern": "^\\*?[0-9a-zA-Z-._\\[\\]:]+$",
@@ -1848,13 +1781,6 @@
                                 "host",
                                 "port",
                                 "weight"
-                              ],
-                              "x-apifox-orders": [
-                                "weight",
-                                "port",
-                                "metadata",
-                                "host",
-                                "priority"
                               ]
                             },
                             "type": "array"
@@ -1923,13 +1849,7 @@
                               ]
                             }
                           }
-                        },
-                        "x-apifox-orders": [
-                          "verify",
-                          "client_key",
-                          "client_cert",
-                          "client_cert_id"
-                        ]
+                        }
                       },
                       "create_time": {
                         "type": "integer"
@@ -1948,36 +1868,10 @@
                           "discovery_type"
                         ]
                       }
-                    ],
-                    "x-apifox-orders": [
-                      "desc",
-                      "update_time",
-                      "key",
-                      "retries",
-                      "retry_timeout",
-                      "pass_host",
-                      "upstream_host",
-                      "type",
-                      "checks",
-                      "hash_on",
-                      "name",
-                      "scheme",
-                      "service_name",
-                      "keepalive_pool",
-                      "timeout",
-                      "id",
-                      "discovery_type",
-                      "labels",
-                      "discovery_args",
-                      "nodes",
-                      "tls",
-                      "create_time"
                     ]
                   },
                   "plugins": {
-                    "type": "object",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "type": "object"
                   },
                   "remote_addr": {
                     "type": "string",
@@ -2016,26 +1910,21 @@
                         "description": "value of label"
                       }
                     },
-                    "description": "key/value pairs to specify attributes",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "description": "key/value pairs to specify attributes"
                   },
                   "timeout": {
                     "properties": {
                       "connect": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "read": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "send": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       }
                     },
                     "type": "object",
@@ -2043,11 +1932,6 @@
                       "connect",
                       "send",
                       "read"
-                    ],
-                    "x-apifox-orders": [
-                      "connect",
-                      "read",
-                      "send"
                     ]
                   },
                   "script": {
@@ -2073,63 +1957,65 @@
                 "type": "object",
                 "anyOf": [
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uris"
+                    ]
                   }
-                ],
-                "x-apifox-orders": [
-                  "desc",
-                  "update_time",
-                  "create_time",
-                  "plugin_config_id",
-                  "status",
-                  "id",
-                  "enable_websocket",
-                  "service_id",
-                  "methods",
-                  "hosts",
-                  "remote_addrs",
-                  "filter_func",
-                  "vars",
-                  "name",
-                  "upstream_id",
-                  "script_id",
-                  "host",
-                  "priority",
-                  "upstream",
-                  "plugins",
-                  "remote_addr",
-                  "labels",
-                  "timeout",
-                  "script",
-                  "uri",
-                  "uris"
                 ]
               },
               "example": {
@@ -3178,6 +3064,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422704-run"
@@ -3341,10 +3231,7 @@
                     "pattern": "^function"
                   },
                   "vars": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
+                    "type": "array"
                   },
                   "name": {
                     "type": "string",
@@ -3464,12 +3351,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "interval",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "http_path": {
                                 "default": "/",
@@ -3525,14 +3407,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "interval",
-                                  "tcp_failures",
-                                  "timeouts",
-                                  "http_statuses",
-                                  "http_failures"
-                                ]
+                                "type": "object"
                               },
                               "req_headers": {
                                 "items": {
@@ -3564,19 +3439,7 @@
                                 "type": "integer"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "port",
-                              "healthy",
-                              "http_path",
-                              "https_verify_certificate",
-                              "unhealthy",
-                              "req_headers",
-                              "timeout",
-                              "type",
-                              "host",
-                              "concurrency"
-                            ]
+                            "type": "object"
                           },
                           "passive": {
                             "properties": {
@@ -3620,11 +3483,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "unhealthy": {
                                 "properties": {
@@ -3662,13 +3521,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "http_failures",
-                                  "tcp_failures",
-                                  "timeouts"
-                                ]
+                                "type": "object"
                               },
                               "type": {
                                 "enum": [
@@ -3680,12 +3533,7 @@
                                 "type": "string"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "healthy",
-                              "unhealthy",
-                              "type"
-                            ]
+                            "type": "object"
                           }
                         },
                         "type": "object",
@@ -3701,10 +3549,6 @@
                               "passive"
                             ]
                           }
-                        ],
-                        "x-apifox-orders": [
-                          "active",
-                          "passive"
                         ]
                       },
                       "hash_on": {
@@ -3760,29 +3604,21 @@
                             "type": "integer"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "size",
-                          "idle_timeout",
-                          "requests"
-                        ]
+                        "type": "object"
                       },
                       "timeout": {
                         "properties": {
                           "connect": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "read": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "send": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           }
                         },
                         "type": "object",
@@ -3790,11 +3626,6 @@
                           "connect",
                           "send",
                           "read"
-                        ],
-                        "x-apifox-orders": [
-                          "connect",
-                          "read",
-                          "send"
                         ]
                       },
                       "id": {
@@ -3826,9 +3657,7 @@
                             "description": "value of label"
                           }
                         },
-                        "description": "key/value pairs to specify attributes",
-                        "x-apifox-orders": [],
-                        "properties": {}
+                        "description": "key/value pairs to specify attributes"
                       },
                       "discovery_args": {
                         "properties": {
@@ -3841,11 +3670,7 @@
                             "description": "namespace id"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "group_name",
-                          "namespace_id"
-                        ]
+                        "type": "object"
                       },
                       "nodes": {
                         "anyOf": [
@@ -3857,8 +3682,7 @@
                                 "description": "weight of node"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": []
+                            "type": "object"
                           },
                           {
                             "items": {
@@ -3875,8 +3699,7 @@
                                 },
                                 "metadata": {
                                   "type": "object",
-                                  "description": "metadata of node",
-                                  "x-apifox-orders": []
+                                  "description": "metadata of node"
                                 },
                                 "host": {
                                   "pattern": "^\\*?[0-9a-zA-Z-._\\[\\]:]+$",
@@ -3893,13 +3716,6 @@
                                 "host",
                                 "port",
                                 "weight"
-                              ],
-                              "x-apifox-orders": [
-                                "weight",
-                                "port",
-                                "metadata",
-                                "host",
-                                "priority"
                               ]
                             },
                             "type": "array"
@@ -3968,13 +3784,7 @@
                               ]
                             }
                           }
-                        },
-                        "x-apifox-orders": [
-                          "verify",
-                          "client_key",
-                          "client_cert",
-                          "client_cert_id"
-                        ]
+                        }
                       },
                       "create_time": {
                         "type": "integer"
@@ -3993,36 +3803,10 @@
                           "discovery_type"
                         ]
                       }
-                    ],
-                    "x-apifox-orders": [
-                      "desc",
-                      "update_time",
-                      "key",
-                      "retries",
-                      "retry_timeout",
-                      "pass_host",
-                      "upstream_host",
-                      "type",
-                      "checks",
-                      "hash_on",
-                      "name",
-                      "scheme",
-                      "service_name",
-                      "keepalive_pool",
-                      "timeout",
-                      "id",
-                      "discovery_type",
-                      "labels",
-                      "discovery_args",
-                      "nodes",
-                      "tls",
-                      "create_time"
                     ]
                   },
                   "plugins": {
-                    "type": "object",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "type": "object"
                   },
                   "remote_addr": {
                     "type": "string",
@@ -4061,26 +3845,21 @@
                         "description": "value of label"
                       }
                     },
-                    "description": "key/value pairs to specify attributes",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "description": "key/value pairs to specify attributes"
                   },
                   "timeout": {
                     "properties": {
                       "connect": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "read": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "send": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       }
                     },
                     "type": "object",
@@ -4088,11 +3867,6 @@
                       "connect",
                       "send",
                       "read"
-                    ],
-                    "x-apifox-orders": [
-                      "connect",
-                      "read",
-                      "send"
                     ]
                   },
                   "script": {
@@ -4118,63 +3892,65 @@
                 "type": "object",
                 "anyOf": [
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uris"
+                    ]
                   }
-                ],
-                "x-apifox-orders": [
-                  "desc",
-                  "update_time",
-                  "create_time",
-                  "plugin_config_id",
-                  "status",
-                  "id",
-                  "enable_websocket",
-                  "service_id",
-                  "methods",
-                  "hosts",
-                  "remote_addrs",
-                  "filter_func",
-                  "vars",
-                  "name",
-                  "upstream_id",
-                  "script_id",
-                  "host",
-                  "priority",
-                  "upstream",
-                  "plugins",
-                  "remote_addr",
-                  "labels",
-                  "timeout",
-                  "script",
-                  "uri",
-                  "uris"
                 ]
               },
               "example": {
@@ -5272,6 +5048,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422705-run"
@@ -6361,16 +6141,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {},
-                  "x-apifox-ignore-properties": [],
-                  "x-apifox-orders": []
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422706-run"
@@ -6532,10 +6303,7 @@
                     "pattern": "^function"
                   },
                   "vars": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
+                    "type": "array"
                   },
                   "name": {
                     "type": "string",
@@ -6655,12 +6423,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "interval",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "http_path": {
                                 "default": "/",
@@ -6716,14 +6479,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "interval",
-                                  "tcp_failures",
-                                  "timeouts",
-                                  "http_statuses",
-                                  "http_failures"
-                                ]
+                                "type": "object"
                               },
                               "req_headers": {
                                 "items": {
@@ -6755,19 +6511,7 @@
                                 "type": "integer"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "port",
-                              "healthy",
-                              "http_path",
-                              "https_verify_certificate",
-                              "unhealthy",
-                              "req_headers",
-                              "timeout",
-                              "type",
-                              "host",
-                              "concurrency"
-                            ]
+                            "type": "object"
                           },
                           "passive": {
                             "properties": {
@@ -6811,11 +6555,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "unhealthy": {
                                 "properties": {
@@ -6853,13 +6593,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "http_failures",
-                                  "tcp_failures",
-                                  "timeouts"
-                                ]
+                                "type": "object"
                               },
                               "type": {
                                 "enum": [
@@ -6871,12 +6605,7 @@
                                 "type": "string"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "healthy",
-                              "unhealthy",
-                              "type"
-                            ]
+                            "type": "object"
                           }
                         },
                         "type": "object",
@@ -6892,10 +6621,6 @@
                               "passive"
                             ]
                           }
-                        ],
-                        "x-apifox-orders": [
-                          "active",
-                          "passive"
                         ]
                       },
                       "hash_on": {
@@ -6951,29 +6676,21 @@
                             "type": "integer"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "size",
-                          "idle_timeout",
-                          "requests"
-                        ]
+                        "type": "object"
                       },
                       "timeout": {
                         "properties": {
                           "connect": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "read": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "send": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           }
                         },
                         "type": "object",
@@ -6981,11 +6698,6 @@
                           "connect",
                           "send",
                           "read"
-                        ],
-                        "x-apifox-orders": [
-                          "connect",
-                          "read",
-                          "send"
                         ]
                       },
                       "id": {
@@ -7017,9 +6729,7 @@
                             "description": "value of label"
                           }
                         },
-                        "description": "key/value pairs to specify attributes",
-                        "x-apifox-orders": [],
-                        "properties": {}
+                        "description": "key/value pairs to specify attributes"
                       },
                       "discovery_args": {
                         "properties": {
@@ -7032,11 +6742,7 @@
                             "description": "namespace id"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "group_name",
-                          "namespace_id"
-                        ]
+                        "type": "object"
                       },
                       "nodes": {
                         "anyOf": [
@@ -7048,8 +6754,7 @@
                                 "description": "weight of node"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": []
+                            "type": "object"
                           },
                           {
                             "items": {
@@ -7066,8 +6771,7 @@
                                 },
                                 "metadata": {
                                   "type": "object",
-                                  "description": "metadata of node",
-                                  "x-apifox-orders": []
+                                  "description": "metadata of node"
                                 },
                                 "host": {
                                   "pattern": "^\\*?[0-9a-zA-Z-._\\[\\]:]+$",
@@ -7084,13 +6788,6 @@
                                 "host",
                                 "port",
                                 "weight"
-                              ],
-                              "x-apifox-orders": [
-                                "weight",
-                                "port",
-                                "metadata",
-                                "host",
-                                "priority"
                               ]
                             },
                             "type": "array"
@@ -7159,13 +6856,7 @@
                               ]
                             }
                           }
-                        },
-                        "x-apifox-orders": [
-                          "verify",
-                          "client_key",
-                          "client_cert",
-                          "client_cert_id"
-                        ]
+                        }
                       },
                       "create_time": {
                         "type": "integer"
@@ -7184,36 +6875,10 @@
                           "discovery_type"
                         ]
                       }
-                    ],
-                    "x-apifox-orders": [
-                      "desc",
-                      "update_time",
-                      "key",
-                      "retries",
-                      "retry_timeout",
-                      "pass_host",
-                      "upstream_host",
-                      "type",
-                      "checks",
-                      "hash_on",
-                      "name",
-                      "scheme",
-                      "service_name",
-                      "keepalive_pool",
-                      "timeout",
-                      "id",
-                      "discovery_type",
-                      "labels",
-                      "discovery_args",
-                      "nodes",
-                      "tls",
-                      "create_time"
                     ]
                   },
                   "plugins": {
-                    "type": "object",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "type": "object"
                   },
                   "remote_addr": {
                     "type": "string",
@@ -7252,26 +6917,21 @@
                         "description": "value of label"
                       }
                     },
-                    "description": "key/value pairs to specify attributes",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "description": "key/value pairs to specify attributes"
                   },
                   "timeout": {
                     "properties": {
                       "connect": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "read": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "send": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       }
                     },
                     "type": "object",
@@ -7279,11 +6939,6 @@
                       "connect",
                       "send",
                       "read"
-                    ],
-                    "x-apifox-orders": [
-                      "connect",
-                      "read",
-                      "send"
                     ]
                   },
                   "script": {
@@ -7309,63 +6964,65 @@
                 "type": "object",
                 "anyOf": [
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uris"
+                    ]
                   }
-                ],
-                "x-apifox-orders": [
-                  "desc",
-                  "update_time",
-                  "create_time",
-                  "plugin_config_id",
-                  "status",
-                  "id",
-                  "enable_websocket",
-                  "service_id",
-                  "methods",
-                  "hosts",
-                  "remote_addrs",
-                  "filter_func",
-                  "vars",
-                  "name",
-                  "upstream_id",
-                  "script_id",
-                  "host",
-                  "priority",
-                  "upstream",
-                  "plugins",
-                  "remote_addr",
-                  "labels",
-                  "timeout",
-                  "script",
-                  "uri",
-                  "uris"
                 ]
               },
               "example": {
@@ -8551,16 +8208,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422707-run"
@@ -8621,14 +8275,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422708-run"
@@ -8802,10 +8449,7 @@
                     "pattern": "^function"
                   },
                   "vars": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
+                    "type": "array"
                   },
                   "name": {
                     "type": "string",
@@ -8925,12 +8569,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "interval",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "http_path": {
                                 "default": "/",
@@ -8986,14 +8625,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "interval",
-                                  "tcp_failures",
-                                  "timeouts",
-                                  "http_statuses",
-                                  "http_failures"
-                                ]
+                                "type": "object"
                               },
                               "req_headers": {
                                 "items": {
@@ -9025,19 +8657,7 @@
                                 "type": "integer"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "port",
-                              "healthy",
-                              "http_path",
-                              "https_verify_certificate",
-                              "unhealthy",
-                              "req_headers",
-                              "timeout",
-                              "type",
-                              "host",
-                              "concurrency"
-                            ]
+                            "type": "object"
                           },
                           "passive": {
                             "properties": {
@@ -9081,11 +8701,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "successes"
-                                ]
+                                "type": "object"
                               },
                               "unhealthy": {
                                 "properties": {
@@ -9123,13 +8739,7 @@
                                     "maximum": 254
                                   }
                                 },
-                                "type": "object",
-                                "x-apifox-orders": [
-                                  "http_statuses",
-                                  "http_failures",
-                                  "tcp_failures",
-                                  "timeouts"
-                                ]
+                                "type": "object"
                               },
                               "type": {
                                 "enum": [
@@ -9141,12 +8751,7 @@
                                 "type": "string"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "healthy",
-                              "unhealthy",
-                              "type"
-                            ]
+                            "type": "object"
                           }
                         },
                         "type": "object",
@@ -9162,10 +8767,6 @@
                               "passive"
                             ]
                           }
-                        ],
-                        "x-apifox-orders": [
-                          "active",
-                          "passive"
                         ]
                       },
                       "hash_on": {
@@ -9221,29 +8822,21 @@
                             "type": "integer"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "size",
-                          "idle_timeout",
-                          "requests"
-                        ]
+                        "type": "object"
                       },
                       "timeout": {
                         "properties": {
                           "connect": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "read": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           },
                           "send": {
                             "exclusiveMinimum": 0,
-                            "type": "number",
-                            "minimum": 0
+                            "type": "number"
                           }
                         },
                         "type": "object",
@@ -9251,11 +8844,6 @@
                           "connect",
                           "send",
                           "read"
-                        ],
-                        "x-apifox-orders": [
-                          "connect",
-                          "read",
-                          "send"
                         ]
                       },
                       "id": {
@@ -9287,9 +8875,7 @@
                             "description": "value of label"
                           }
                         },
-                        "description": "key/value pairs to specify attributes",
-                        "x-apifox-orders": [],
-                        "properties": {}
+                        "description": "key/value pairs to specify attributes"
                       },
                       "discovery_args": {
                         "properties": {
@@ -9302,11 +8888,7 @@
                             "description": "namespace id"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "group_name",
-                          "namespace_id"
-                        ]
+                        "type": "object"
                       },
                       "nodes": {
                         "anyOf": [
@@ -9318,8 +8900,7 @@
                                 "description": "weight of node"
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": []
+                            "type": "object"
                           },
                           {
                             "items": {
@@ -9336,8 +8917,7 @@
                                 },
                                 "metadata": {
                                   "type": "object",
-                                  "description": "metadata of node",
-                                  "x-apifox-orders": []
+                                  "description": "metadata of node"
                                 },
                                 "host": {
                                   "pattern": "^\\*?[0-9a-zA-Z-._\\[\\]:]+$",
@@ -9354,13 +8934,6 @@
                                 "host",
                                 "port",
                                 "weight"
-                              ],
-                              "x-apifox-orders": [
-                                "weight",
-                                "port",
-                                "metadata",
-                                "host",
-                                "priority"
                               ]
                             },
                             "type": "array"
@@ -9429,13 +9002,7 @@
                               ]
                             }
                           }
-                        },
-                        "x-apifox-orders": [
-                          "verify",
-                          "client_key",
-                          "client_cert",
-                          "client_cert_id"
-                        ]
+                        }
                       },
                       "create_time": {
                         "type": "integer"
@@ -9454,36 +9021,10 @@
                           "discovery_type"
                         ]
                       }
-                    ],
-                    "x-apifox-orders": [
-                      "desc",
-                      "update_time",
-                      "key",
-                      "retries",
-                      "retry_timeout",
-                      "pass_host",
-                      "upstream_host",
-                      "type",
-                      "checks",
-                      "hash_on",
-                      "name",
-                      "scheme",
-                      "service_name",
-                      "keepalive_pool",
-                      "timeout",
-                      "id",
-                      "discovery_type",
-                      "labels",
-                      "discovery_args",
-                      "nodes",
-                      "tls",
-                      "create_time"
                     ]
                   },
                   "plugins": {
-                    "type": "object",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "type": "object"
                   },
                   "remote_addr": {
                     "type": "string",
@@ -9522,26 +9063,21 @@
                         "description": "value of label"
                       }
                     },
-                    "description": "key/value pairs to specify attributes",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "description": "key/value pairs to specify attributes"
                   },
                   "timeout": {
                     "properties": {
                       "connect": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "read": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "send": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       }
                     },
                     "type": "object",
@@ -9549,11 +9085,6 @@
                       "connect",
                       "send",
                       "read"
-                    ],
-                    "x-apifox-orders": [
-                      "connect",
-                      "read",
-                      "send"
                     ]
                   },
                   "script": {
@@ -9579,63 +9110,65 @@
                 "type": "object",
                 "anyOf": [
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "plugins",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "upstream_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_id",
+                      "uris"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uri"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "script",
+                      "uris"
+                    ]
                   }
-                ],
-                "x-apifox-orders": [
-                  "desc",
-                  "update_time",
-                  "create_time",
-                  "plugin_config_id",
-                  "status",
-                  "id",
-                  "enable_websocket",
-                  "service_id",
-                  "methods",
-                  "hosts",
-                  "remote_addrs",
-                  "filter_func",
-                  "vars",
-                  "name",
-                  "upstream_id",
-                  "script_id",
-                  "host",
-                  "priority",
-                  "upstream",
-                  "plugins",
-                  "remote_addr",
-                  "labels",
-                  "timeout",
-                  "script",
-                  "uri",
-                  "uris"
                 ]
               },
               "example": [
@@ -10704,16 +10237,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422709-run"
@@ -13095,6 +12625,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422711-run"
@@ -13925,14 +13459,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422712-run"
@@ -15506,6 +15033,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422713-run"
@@ -17093,16 +16624,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422714-run"
@@ -17163,18 +16691,11 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
-        },
-        "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422716-run"
-      }
+        }
+      },
+      "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422716-run"
     },
     "/apisix/admin/services/{id}/{path}": {
       "patch": {
@@ -18730,16 +18251,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422715-run"
@@ -18961,6 +18479,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422717-run"
@@ -19282,14 +18804,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422719-run"
@@ -19350,14 +18865,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422720-run"
@@ -19465,12 +18973,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "interval",
-                              "successes"
-                            ]
+                            "type": "object"
                           },
                           "http_path": {
                             "default": "/",
@@ -19526,14 +19029,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "interval",
-                              "tcp_failures",
-                              "timeouts",
-                              "http_statuses",
-                              "http_failures"
-                            ]
+                            "type": "object"
                           },
                           "req_headers": {
                             "items": {
@@ -19565,19 +19061,7 @@
                             "type": "integer"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "port",
-                          "healthy",
-                          "http_path",
-                          "https_verify_certificate",
-                          "unhealthy",
-                          "req_headers",
-                          "timeout",
-                          "type",
-                          "host",
-                          "concurrency"
-                        ]
+                        "type": "object"
                       },
                       "passive": {
                         "properties": {
@@ -19621,11 +19105,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "successes"
-                            ]
+                            "type": "object"
                           },
                           "unhealthy": {
                             "properties": {
@@ -19663,13 +19143,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "http_failures",
-                              "tcp_failures",
-                              "timeouts"
-                            ]
+                            "type": "object"
                           },
                           "type": {
                             "enum": [
@@ -19681,12 +19155,7 @@
                             "type": "string"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "healthy",
-                          "unhealthy",
-                          "type"
-                        ]
+                        "type": "object"
                       }
                     },
                     "type": "object",
@@ -19702,10 +19171,6 @@
                           "passive"
                         ]
                       }
-                    ],
-                    "x-apifox-orders": [
-                      "active",
-                      "passive"
                     ]
                   },
                   "hash_on": {
@@ -19761,29 +19226,21 @@
                         "type": "integer"
                       }
                     },
-                    "type": "object",
-                    "x-apifox-orders": [
-                      "size",
-                      "idle_timeout",
-                      "requests"
-                    ]
+                    "type": "object"
                   },
                   "timeout": {
                     "properties": {
                       "connect": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "read": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "send": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       }
                     },
                     "type": "object",
@@ -19791,11 +19248,6 @@
                       "connect",
                       "send",
                       "read"
-                    ],
-                    "x-apifox-orders": [
-                      "connect",
-                      "read",
-                      "send"
                     ]
                   },
                   "id": {
@@ -19827,9 +19279,7 @@
                         "description": "value of label"
                       }
                     },
-                    "description": "key/value pairs to specify attributes",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "description": "key/value pairs to specify attributes"
                   },
                   "discovery_args": {
                     "properties": {
@@ -19842,11 +19292,7 @@
                         "description": "namespace id"
                       }
                     },
-                    "type": "object",
-                    "x-apifox-orders": [
-                      "group_name",
-                      "namespace_id"
-                    ]
+                    "type": "object"
                   },
                   "nodes": {
                     "anyOf": [
@@ -19858,8 +19304,7 @@
                             "description": "weight of node"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": []
+                        "type": "object"
                       },
                       {
                         "items": {
@@ -19876,8 +19321,7 @@
                             },
                             "metadata": {
                               "type": "object",
-                              "description": "metadata of node",
-                              "x-apifox-orders": []
+                              "description": "metadata of node"
                             },
                             "host": {
                               "pattern": "^\\*?[0-9a-zA-Z-._\\[\\]:]+$",
@@ -19894,13 +19338,6 @@
                             "host",
                             "port",
                             "weight"
-                          ],
-                          "x-apifox-orders": [
-                            "weight",
-                            "port",
-                            "metadata",
-                            "host",
-                            "priority"
                           ]
                         },
                         "type": "array"
@@ -19969,13 +19406,7 @@
                           ]
                         }
                       }
-                    },
-                    "x-apifox-orders": [
-                      "verify",
-                      "client_key",
-                      "client_cert",
-                      "client_cert_id"
-                    ]
+                    }
                   },
                   "create_time": {
                     "type": "integer"
@@ -19984,35 +19415,16 @@
                 "type": "object",
                 "oneOf": [
                   {
-                    "type": "string"
+                    "required": [
+                      "nodes"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_name",
+                      "discovery_type"
+                    ]
                   }
-                ],
-                "x-apifox-orders": [
-                  "desc",
-                  "update_time",
-                  "key",
-                  "retries",
-                  "retry_timeout",
-                  "pass_host",
-                  "upstream_host",
-                  "type",
-                  "checks",
-                  "hash_on",
-                  "name",
-                  "scheme",
-                  "service_name",
-                  "keepalive_pool",
-                  "timeout",
-                  "id",
-                  "discovery_type",
-                  "labels",
-                  "discovery_args",
-                  "nodes",
-                  "tls",
-                  "create_time"
                 ]
               },
               "example": {
@@ -20726,16 +20138,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422722-run"
@@ -21449,14 +20858,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422723-run"
@@ -21517,14 +20919,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422724-run"
@@ -21630,12 +21025,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "interval",
-                              "successes"
-                            ]
+                            "type": "object"
                           },
                           "http_path": {
                             "default": "/",
@@ -21691,14 +21081,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "interval",
-                              "tcp_failures",
-                              "timeouts",
-                              "http_statuses",
-                              "http_failures"
-                            ]
+                            "type": "object"
                           },
                           "req_headers": {
                             "items": {
@@ -21730,19 +21113,7 @@
                             "type": "integer"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "port",
-                          "healthy",
-                          "http_path",
-                          "https_verify_certificate",
-                          "unhealthy",
-                          "req_headers",
-                          "timeout",
-                          "type",
-                          "host",
-                          "concurrency"
-                        ]
+                        "type": "object"
                       },
                       "passive": {
                         "properties": {
@@ -21786,11 +21157,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "successes"
-                            ]
+                            "type": "object"
                           },
                           "unhealthy": {
                             "properties": {
@@ -21828,13 +21195,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "http_failures",
-                              "tcp_failures",
-                              "timeouts"
-                            ]
+                            "type": "object"
                           },
                           "type": {
                             "enum": [
@@ -21846,12 +21207,7 @@
                             "type": "string"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "healthy",
-                          "unhealthy",
-                          "type"
-                        ]
+                        "type": "object"
                       }
                     },
                     "type": "object",
@@ -21867,10 +21223,6 @@
                           "passive"
                         ]
                       }
-                    ],
-                    "x-apifox-orders": [
-                      "active",
-                      "passive"
                     ]
                   },
                   "hash_on": {
@@ -21926,29 +21278,21 @@
                         "type": "integer"
                       }
                     },
-                    "type": "object",
-                    "x-apifox-orders": [
-                      "size",
-                      "idle_timeout",
-                      "requests"
-                    ]
+                    "type": "object"
                   },
                   "timeout": {
                     "properties": {
                       "connect": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "read": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "send": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       }
                     },
                     "type": "object",
@@ -21956,11 +21300,6 @@
                       "connect",
                       "send",
                       "read"
-                    ],
-                    "x-apifox-orders": [
-                      "connect",
-                      "read",
-                      "send"
                     ]
                   },
                   "id": {
@@ -21992,9 +21331,7 @@
                         "description": "value of label"
                       }
                     },
-                    "description": "key/value pairs to specify attributes",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "description": "key/value pairs to specify attributes"
                   },
                   "discovery_args": {
                     "properties": {
@@ -22007,11 +21344,7 @@
                         "description": "namespace id"
                       }
                     },
-                    "type": "object",
-                    "x-apifox-orders": [
-                      "group_name",
-                      "namespace_id"
-                    ]
+                    "type": "object"
                   },
                   "nodes": {
                     "anyOf": [
@@ -22023,8 +21356,7 @@
                             "description": "weight of node"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": []
+                        "type": "object"
                       },
                       {
                         "items": {
@@ -22041,8 +21373,7 @@
                             },
                             "metadata": {
                               "type": "object",
-                              "description": "metadata of node",
-                              "x-apifox-orders": []
+                              "description": "metadata of node"
                             },
                             "host": {
                               "pattern": "^\\*?[0-9a-zA-Z-._\\[\\]:]+$",
@@ -22059,13 +21390,6 @@
                             "host",
                             "port",
                             "weight"
-                          ],
-                          "x-apifox-orders": [
-                            "weight",
-                            "port",
-                            "metadata",
-                            "host",
-                            "priority"
                           ]
                         },
                         "type": "array"
@@ -22134,13 +21458,7 @@
                           ]
                         }
                       }
-                    },
-                    "x-apifox-orders": [
-                      "verify",
-                      "client_key",
-                      "client_cert",
-                      "client_cert_id"
-                    ]
+                    }
                   },
                   "create_time": {
                     "type": "integer"
@@ -22149,35 +21467,16 @@
                 "type": "object",
                 "oneOf": [
                   {
-                    "type": "string"
+                    "required": [
+                      "nodes"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_name",
+                      "discovery_type"
+                    ]
                   }
-                ],
-                "x-apifox-orders": [
-                  "desc",
-                  "update_time",
-                  "key",
-                  "retries",
-                  "retry_timeout",
-                  "pass_host",
-                  "upstream_host",
-                  "type",
-                  "checks",
-                  "hash_on",
-                  "name",
-                  "scheme",
-                  "service_name",
-                  "keepalive_pool",
-                  "timeout",
-                  "id",
-                  "discovery_type",
-                  "labels",
-                  "discovery_args",
-                  "nodes",
-                  "tls",
-                  "create_time"
                 ]
               },
               "example": {
@@ -22976,6 +22275,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83804367-run"
@@ -23823,12 +23126,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "interval",
-                              "successes"
-                            ]
+                            "type": "object"
                           },
                           "http_path": {
                             "default": "/",
@@ -23884,14 +23182,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "interval",
-                              "tcp_failures",
-                              "timeouts",
-                              "http_statuses",
-                              "http_failures"
-                            ]
+                            "type": "object"
                           },
                           "req_headers": {
                             "items": {
@@ -23923,19 +23214,7 @@
                             "type": "integer"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "port",
-                          "healthy",
-                          "http_path",
-                          "https_verify_certificate",
-                          "unhealthy",
-                          "req_headers",
-                          "timeout",
-                          "type",
-                          "host",
-                          "concurrency"
-                        ]
+                        "type": "object"
                       },
                       "passive": {
                         "properties": {
@@ -23979,11 +23258,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "successes"
-                            ]
+                            "type": "object"
                           },
                           "unhealthy": {
                             "properties": {
@@ -24021,13 +23296,7 @@
                                 "maximum": 254
                               }
                             },
-                            "type": "object",
-                            "x-apifox-orders": [
-                              "http_statuses",
-                              "http_failures",
-                              "tcp_failures",
-                              "timeouts"
-                            ]
+                            "type": "object"
                           },
                           "type": {
                             "enum": [
@@ -24039,12 +23308,7 @@
                             "type": "string"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": [
-                          "healthy",
-                          "unhealthy",
-                          "type"
-                        ]
+                        "type": "object"
                       }
                     },
                     "type": "object",
@@ -24060,10 +23324,6 @@
                           "passive"
                         ]
                       }
-                    ],
-                    "x-apifox-orders": [
-                      "active",
-                      "passive"
                     ]
                   },
                   "hash_on": {
@@ -24119,29 +23379,21 @@
                         "type": "integer"
                       }
                     },
-                    "type": "object",
-                    "x-apifox-orders": [
-                      "size",
-                      "idle_timeout",
-                      "requests"
-                    ]
+                    "type": "object"
                   },
                   "timeout": {
                     "properties": {
                       "connect": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "read": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       },
                       "send": {
                         "exclusiveMinimum": 0,
-                        "type": "number",
-                        "minimum": 0
+                        "type": "number"
                       }
                     },
                     "type": "object",
@@ -24149,11 +23401,6 @@
                       "connect",
                       "send",
                       "read"
-                    ],
-                    "x-apifox-orders": [
-                      "connect",
-                      "read",
-                      "send"
                     ]
                   },
                   "id": {
@@ -24185,9 +23432,7 @@
                         "description": "value of label"
                       }
                     },
-                    "description": "key/value pairs to specify attributes",
-                    "x-apifox-orders": [],
-                    "properties": {}
+                    "description": "key/value pairs to specify attributes"
                   },
                   "discovery_args": {
                     "properties": {
@@ -24200,11 +23445,7 @@
                         "description": "namespace id"
                       }
                     },
-                    "type": "object",
-                    "x-apifox-orders": [
-                      "group_name",
-                      "namespace_id"
-                    ]
+                    "type": "object"
                   },
                   "nodes": {
                     "anyOf": [
@@ -24216,8 +23457,7 @@
                             "description": "weight of node"
                           }
                         },
-                        "type": "object",
-                        "x-apifox-orders": []
+                        "type": "object"
                       },
                       {
                         "items": {
@@ -24234,8 +23474,7 @@
                             },
                             "metadata": {
                               "type": "object",
-                              "description": "metadata of node",
-                              "x-apifox-orders": []
+                              "description": "metadata of node"
                             },
                             "host": {
                               "pattern": "^\\*?[0-9a-zA-Z-._\\[\\]:]+$",
@@ -24252,13 +23491,6 @@
                             "host",
                             "port",
                             "weight"
-                          ],
-                          "x-apifox-orders": [
-                            "weight",
-                            "port",
-                            "metadata",
-                            "host",
-                            "priority"
                           ]
                         },
                         "type": "array"
@@ -24327,13 +23559,7 @@
                           ]
                         }
                       }
-                    },
-                    "x-apifox-orders": [
-                      "verify",
-                      "client_key",
-                      "client_cert",
-                      "client_cert_id"
-                    ]
+                    }
                   },
                   "create_time": {
                     "type": "integer"
@@ -24342,35 +23568,16 @@
                 "type": "object",
                 "oneOf": [
                   {
-                    "type": "string"
+                    "required": [
+                      "nodes"
+                    ]
                   },
                   {
-                    "type": "string"
+                    "required": [
+                      "service_name",
+                      "discovery_type"
+                    ]
                   }
-                ],
-                "x-apifox-orders": [
-                  "desc",
-                  "update_time",
-                  "key",
-                  "retries",
-                  "retry_timeout",
-                  "pass_host",
-                  "upstream_host",
-                  "type",
-                  "checks",
-                  "hash_on",
-                  "name",
-                  "scheme",
-                  "service_name",
-                  "keepalive_pool",
-                  "timeout",
-                  "id",
-                  "discovery_type",
-                  "labels",
-                  "discovery_args",
-                  "nodes",
-                  "tls",
-                  "create_time"
                 ]
               },
               "example": {
@@ -25066,6 +24273,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422726-run"
@@ -25516,6 +24727,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422727-run"
@@ -25778,14 +24993,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422728-run"
@@ -25846,14 +25054,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422729-run"
@@ -26557,6 +25758,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422731-run"
@@ -26727,6 +25932,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422737-run"
@@ -26851,14 +26060,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422738-run"
@@ -27025,16 +26227,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422739-run"
@@ -27095,14 +26294,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422740-run"
@@ -27426,16 +26618,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422742-run"
@@ -27656,6 +26845,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422743-run"
@@ -27805,14 +26998,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422744-run"
@@ -28028,16 +27214,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422745-run"
@@ -28098,14 +27281,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422746-run"
@@ -28496,16 +27672,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422748-run"
@@ -28724,6 +27897,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422749-run"
@@ -28872,14 +28049,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422750-run"
@@ -29094,16 +28264,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422751-run"
@@ -29164,14 +28331,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422752-run"
@@ -29565,16 +28725,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422754-run"
@@ -29662,6 +28819,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422755-run"
@@ -29738,14 +28899,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422756-run"
@@ -29806,14 +28960,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422757-run"
@@ -30994,14 +30141,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422759-run"
@@ -69456,6 +68596,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422761-run"
@@ -70365,14 +69509,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422762-run"
@@ -70433,14 +69570,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422763-run"
@@ -73093,6 +72223,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422765-run"
@@ -73342,14 +72476,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422767-run"
@@ -73489,6 +72616,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422768-run"
@@ -73627,16 +72758,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422769-run"
@@ -73707,14 +72835,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422770-run"
@@ -73873,16 +72994,13 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
+          },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83422771-run"
@@ -74095,6 +73213,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83626250-run"
@@ -74211,14 +73333,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83628300-run"
@@ -74278,14 +73393,7 @@
           },
           "404": {
             "description": "Key not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83628851-run"
@@ -74527,6 +73635,10 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid configuration",
+            "content": {}
           }
         },
         "x-run-in-apifox": "https://apifox.com/web/project/2763710/apis/api-83628507-run"
